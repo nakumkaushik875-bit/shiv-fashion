@@ -6,9 +6,15 @@
 <title>Shiv Fashion</title>
 
 <style>
-body{
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
+}
+
+body{
 background:#000;
 color:white;
 }
@@ -17,38 +23,64 @@ header{
 background:#111;
 padding:20px;
 text-align:center;
-border-bottom:2px solid gold;
+border-bottom:3px solid gold;
 }
 
-h1{
+header h1{
 color:gold;
+font-size:45px;
+}
+
+header p{
+font-size:20px;
 }
 
 .hero{
-padding:50px;
+padding:80px 20px;
 text-align:center;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7));
+}
+
+.hero h2{
+font-size:50px;
+color:gold;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
 }
 
 .btn{
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
 background:gold;
 color:black;
-padding:12px 25px;
 text-decoration:none;
 font-weight:bold;
-border-radius:5px;
+border-radius:10px;
 }
 
-.section{
-padding:40px;
+.gallery{
+padding:50px 20px;
 text-align:center;
 }
 
-footer{
-background:#111;
-padding:20px;
-text-align:center;
-border-top:2px solid gold;
+.gallery h2{
+color:gold;
+margin-bottom:20px;
 }
+
+.gallery img{
+width:300px;
+height:220px;
+object-fit:cover;
+margin:10px;
+border-radius:10px;
+border:2px solid gold;
+}
+
 </style>
 </head>
 
@@ -60,34 +92,53 @@ border-top:2px solid gold;
 </header>
 
 <section class="hero">
-<h2>Premium Fashion For Every Occasion</h2>
-<p>Best Mens Wear & Kids Wear Store in Jamnagar</p>
+<h2>Welcome To Shiv Fashion</h2>
+<p>Premium Mens Wear & Kids Wear Store In Jamnagar</p>
 
 <a class="btn"
 href="https://wa.me/917878489494">
 WhatsApp Us
 </a>
+</section><section class="gallery">
+<h2>Our Collection</h2>
+
+<img src="0d5ad83b-0aa3-4f1d-b559-7b1324216d27.jpg">
+<img src="2393dac0-7ba1-4ae8-b4ef-9b1777e3b202.jpg">
+<img src="4771bd64-04c9-4b33-8823-5f94fe0469af.jpg">
+<img src="d2ce82f5-439e-47f2-9a51-9cbcb2474384.jpg">
+
 </section>
 
-<section class="section">
-<h2>About Us</h2>
-<p>
-Welcome to Shiv Fashion.
+<section style="padding:50px;text-align:center;">
+<h2 style="color:gold;">About Us</h2>
+
+<p style="margin-top:20px;font-size:20px;">
+Welcome to Shiv Fashion.<br>
+શિવ ફેશનમાં આપનું સ્વાગત છે.<br><br>
+
 We provide premium quality Mens Wear and Kids Wear.
 </p>
+
 </section>
 
-<section class="section">
-<h2>Contact Us</h2>
+<section style="padding:50px;text-align:center;">
+<h2 style="color:gold;">Contact Us</h2>
 
-<p>📍 Gokul Nagar, Radar Road,
-Adesh Hanuman Mandir Ni Bajuma,
-Jamnagar</p>
+<p style="margin-top:20px;">
+📍 Gokul Nagar, Radar Road,<br>
+Adesh Hanuman Mandir Ni Bajuma,<br>
+Jamnagar
+</p>
 
-<p>📞 7878489494</p>
+<br>
+
+<p>
+📞 7878489494
+</p>
+
 </section>
 
-<footer>
+<footer style="background:#111;padding:20px;text-align:center;border-top:3px solid gold;">
 © 2026 Shiv Fashion
 </footer>
 
