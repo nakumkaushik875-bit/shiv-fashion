@@ -172,6 +172,22 @@ z-index:9999;
 ">
 WhatsApp
 </a>
-  
+<script>
+async function loadProducts() {
+  const sheetID = "19R3bxLTO_gje9OppKefAfpmwj8_cQ3HyByoaukSsxIo";
+  const url = `https://opensheet.elk.sh/${sheetID}/Sheet1`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    console.log(data);
+  } catch (error) {
+    console.log("Error loading products", error);
+  }
+}
+
+loadProducts();
+</script>  
 </body>
 </html>
