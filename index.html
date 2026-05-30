@@ -115,10 +115,15 @@ WhatsApp Us
 </section><section class="gallery" id="collection">
 <h2>Our Collection</h2>
 
-<img src="0d5ad83b-0aa3-4f1d-b559-7b1324216d27.jpg">
-<img src="2393dac0-7ba1-4ae8-b4ef-9b1777e3b202.jpg">
-<img src="4771bd64-04c9-4b33-8823-5f94fe0469af.jpg">
-<img src="d2ce82f5-439e-47f2-9a51-9cbcb2474384.jpg">
+<div id="products"
+style="
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+margin-top:30px;
+">
+</div>
 
 </section>
 
@@ -188,6 +193,68 @@ async function loadProducts() {
 }
 
 loadProducts();
+</script>
+<script>
+const sheetURL =
+"https://opensheet.elk.sh/19R3bxLTO_gje9OppKefAfpmwj8_cQ3HyByoaukSsxIo/Sheet1";
+
+fetch(sheetURL)
+.then(res => res.json())
+.then(data => {
+
+let html = "";
+
+data.forEach(product => {
+
+html += `
+<div style="
+background:#111;
+border:2px solid gold;
+border-radius:15px;
+padding:15px;
+width:250px;
+text-align:center;
+">
+
+<img src="${product['Image URL']}"
+style="
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+">
+
+<h3>${product['Product Name']}</h3>
+
+<p style="color:gold;font-size:22px;">
+₹${product['Price']}
+</p>
+
+<p>
+${product['Description']}
+</p>
+
+<a href="https://wa.me/917878489494"
+style="
+display:inline-block;
+background:gold;
+color:black;
+padding:10px 20px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+">
+Order Now
+</a>
+
+</div>
+`;
+
+});
+
+document.getElementById("products").innerHTML = html;
+
+});
 </script>  
 </body>
 </html>
